@@ -1,0 +1,140 @@
+<script> 
+
+// Propiedad LENGTH ()
+// Obtiene cuantos elementos hay dentro de un ARRAY 
+
+const numeros = [1,2,4,7,8]
+for (let i = 0; i < numeros.length; i++){
+    //alert (numeros [i])
+    break
+}
+//console.log (numeros.length)
+
+// Propiedad PUSH ()
+// Agrega elementos al final del ARRAY 
+const marcas = ['nike', 'adidas', 'puma']
+console.log(marcas)
+marcas.push ('diadora')
+//console.log(marcas)
+
+// Propiedad UNSHIFT ()
+// Agrega elementos al principio del ARRAY
+
+const shrek = ['Fiona', 'Burro', 'Gato']
+console.log(shrek)
+shrek.unshift ('Sapo')
+console.log (shrek)
+
+
+
+// Propiedad SHIFT ()
+// Elimina el primer elemento del ARRAY
+const hielo = ['perro', 'mamut', 'tigre']
+console.log(hielo)
+hielo.shift()
+//console.log(hielo)
+
+// Propiedad POP ()
+// Elimina el últmo elemento del ARRAY
+const boca = ['migliore', 'caranta', 'carrizo']
+console.log(boca)
+boca.pop()
+//console.log(boca)
+
+// Método SPLICE ()
+// Elimina elementos dentro del ARRAY---> en ese rango
+const nombres1 = ['carlos', 'rita', 'edu', 'santi']
+console.log(nombres1)
+nombres1.splice (1,3) // --> elimina del 1 al 3, y no, 1 y 3
+//console.log(nombres1)
+
+// Método JOIN ()
+// Agrega strings a los elementos 
+
+const dias = ['lunes', 'martes', 'viernes']
+//console.log (dias)
+
+//console.log(dias.join (' y '))
+
+
+
+// Método CONCAT ()
+// Combina 2 ARRAYS en uno solo
+const perros = ['flofi', 'punny','catriel']
+const gatos = ['garfield', 'gatubela', 'gas']
+const mascotas = perros.concat (gatos)
+//console.log(mascotas)
+
+// Método SLICE ()
+// Devuelve una copia dentro del nuevo ARRAY
+const nom = ['marta','diego','ramiro','cecilia']
+const nomMasc = nom.slice (1,3)
+console.log(nomMasc)
+
+// Método INDEXOF ()
+// Obtiene el índice del elemento del ARRAY. Recibe los elementos por parámetros
+
+const nom2 = ['carla','raul','sandra','carmen']
+console.log (nom2.indexOf('carla'))
+console.log(nom2.indexOf('carmen'))
+
+//Método INCLUDES ()
+// Booleano que permite saber si existe ese parametro o no dentro del ARRAY
+
+const river = ['salas','gallardo','pinola']
+console.log(river.includes('salas')) // ---> true
+console.log(river.includes('ponzio')) // ---> false
+
+//Método REVERSE ()
+// Da vuelta el orden del ARRAY
+const carlos = ['primero','segundo','tercero','cuarto']
+carlos.reverse()
+console.log(carlos)
+
+//---------------------------------------------------------------------
+
+const objeto1 = {id:1, producto: 'arroz'}
+const array = [objeto1, {id:2, producto: 'fideos'}]
+array.push ({id:3, producto: 'ddl'})
+
+
+const agregarMascotas = () => {
+    const nombre = prompt ('ingrese nombre')
+    const tipo = prompt ('ingrese tipo')
+    const edad = Number (prompt ('ingrese edad'))
+}
+
+// For of: Recorre elemento por elemento al array 
+//           variable     array         
+for (const asistencia of nombres1){
+    console.log(asistencia.nombres1)
+}
+
+
+
+
+// Ejemplo del profe
+
+const cursos = [
+            {nombre: 'JavaScript', precio: 30},
+            {nombre: 'atfa', precio: 45},
+            {nombre: 'lenovo', precio: 60},
+            {nombre: 'samsung', precio: 70}
+        
+        ]
+
+
+const cursos2 = cursos.map((curso) => {
+    const newcurso = {
+        nombre: curso.nombre,
+        precio: precio.precio,
+        cupo: 100
+    }
+    return newcurso
+})
+
+
+
+
+
+</script>

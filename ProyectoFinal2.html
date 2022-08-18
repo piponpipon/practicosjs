@@ -1,0 +1,127 @@
+<script>
+// Si quiero tener datos estáticos: Array con muchos id
+// Si quiero aplicar métodos a cada clase: constructor en cada posicion del Array
+
+
+
+
+
+const jugadoresSeleccionados = [
+    {
+        id:1,
+        nombre: 'Miguel Sanchez',
+        nacionalidad: 'Brasil',        
+        piernaHabil: 'Izquierda',
+        promedioGol: 3.2  
+    },
+    {  
+        id:2,
+        nombre: 'Juan Fernandez',
+        nacionalidad:'Argentina',
+        piernaHabil: 'Derecha',
+        promedioGol: 4.3   
+    },
+    {
+        id:3,
+        nombre: 'Wahinton Silva',
+        nacionalidad:'Uruguay',
+        piernaHabil: 'Derecha',
+        promedioGol: 3.2
+    },
+    {
+        id:4,
+        nombre: 'Carlos Mena',
+        nacionalidad: 'Chile',
+        piernaHabil: 'Izquierda',
+        promedioGol: 3.1
+    }
+]
+
+for (const nacionalidad of jugadoresSeleccionados){
+    console.log(nacionalidad.nombre);
+    console.log(nacionalidad.promedioGol);
+}
+
+console.log(jugadoresSeleccionados)
+
+
+jugadoresSeleccionados.push () = prompt ('Ingrese su nombre')
+
+console.log()    
+
+
+class Jugadornuevo {
+    constructor (id, nombre, nacionalidad, piernaHabil, promedioGol) { 
+        this.id = jugadoresSeleccionados.length() +1;
+        this.nombre = prompt ('Ingrese su nombre y apellido');
+        this.nacionalidad = prompt ('Ingrese su nacionalidad');
+        this.piernaHabil = prompt ('¿Cual es su pierna habil');
+        this.promedioGol = promDeGol (prompt('Indique cantidad de goles'), prompt ('Indique cantidad de partidos jugados'));
+    }
+        
+    } 
+
+
+
+
+    function promDeGol (cantGol, cantPartidos) {
+        var promedio = (cantGol/cantPartidos)
+        console.log(promedio)
+        if (promedio <= 1.5){
+        console.log("Jugador no seleccionado")
+    } else
+    console.log("Jugador seleccionado")
+    }
+
+
+
+
+//for (let i= 0; i < jugadores.length; i++){
+    //console.log(i)
+
+
+
+//}
+
+
+
+
+/*const sueldo = function (cantGol, bonoXGol) {return cantGol * 900}
+console.log(sueldo(prompt ('Deposite la cantidad de goles y averigue cuanto va a cobrar')))*/
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //this.id = jugadoresSeleccionados.length() +1;
+     this.nombre = prompt ('Ingrese su nombre y apellido');
+        this.nacionalidad = prompt ('Ingrese su nacionalidad');
+        this.piernaHabil = prompt ('¿Cual es su pierna habil');
+        this.promedioGol = promDeGol (prompt('Indique cantidad de goles'), prompt ('Indique cantidad de partidos jugados'));
+        
+        
+    } 
+*/
+
+
+
+
+
+</script>

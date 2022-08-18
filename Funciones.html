@@ -1,0 +1,61 @@
+<script>
+
+function ponerNombre (nombre, apellido, edad) {
+let nombreUsuario = prompt ("¿Está feliz?")
+console.log ("Nombre: " + nombre)
+console.log ("Apellido: " + apellido)
+console.log ("Edad: " + edad)
+
+if (nombreUsuario == "si"){
+    alert ('Disfrute su día :)')
+
+} else 
+alert ('Espero se mejore')
+}
+
+function cualidades (altura, talle){
+    console.log ('Altura: ', altura)
+    console.log ('Talle: ', talle)
+
+
+}
+
+// function sumar (numero1, numero2, numero3){
+ //let ressultado = (numero1 + numero2) * numero3;
+   // return ressultado
+//console.log (numero1)
+//console.log (numero2)
+//console.log (numero3)
+//}
+
+
+
+//Armo variables independientes
+const suma = function (num1,num2) {return num1 + num2}
+//console.log (suma (4,199))
+const resta = function (a,b) {return a - b}
+//console.log (resta (12, 6))
+
+
+const iva = function (x) {return x * 0.21}
+let precioProducto = 500
+let descuento = 50 
+//calculo el precio del producto + iva - descuento
+let nuevoPrecio = resta(suma(precioProducto, iva(precioProducto)), descuento)
+console.log(nuevoPrecio)
+
+
+
+
+
+//const multiplicacion = function (nnum1, nnum2, nnum3) {return (nnum1 * nnum3) / nnum2 * 2 }
+//console.log (multiplicacion (3, 140, 87))
+
+ponerNombre ('Lucía', 'Veller', '30')
+cualidades ( 1.7, 38)
+//let resultado = sumar (2, 15, 6)
+//console.log ('Su cuenta da ' + resultado)
+
+
+
+</script>

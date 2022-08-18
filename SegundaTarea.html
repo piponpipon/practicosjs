@@ -1,0 +1,53 @@
+<script>
+
+class Jugadorfutsal {
+    constructor (nombre, apellido, edad, pierna, posicion) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.pierna = pierna;
+        this.posicion = posicion;
+        
+        
+    } 
+
+    }
+    function promDeGol (cantGol, cantPartidos){
+        var promedio = (cantGol/cantPartidos)
+        console.log(promedio)
+        if (promedio <= 1.5){
+        console.log("Jugador no seleccionado")
+    } else
+    console.log("Jugador seleccionado")
+    }
+
+const Jugador1 = new Jugadorfutsal ("Pablo", "Sosa", 34, "Izquierda", "Pivot") 
+console.log(Jugador1)
+promDeGol (12, 28)
+
+const Jugador2 = new Jugadorfutsal ("Federico", "Torres", 22, "Derecha", "Ala")
+console.log(Jugador2)
+promDeGol (15,4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

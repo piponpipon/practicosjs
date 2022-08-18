@@ -1,0 +1,62 @@
+<script>
+
+//Creo un objeto para agrupar variables
+// Los datos se separan con comas 
+//const personal = {
+     //nombre: 'Carlos',
+     //apellido: 'Richard',
+     //edad: 34
+//}
+
+
+//Para mostrar los datos por consola, los nombro con un (.)
+
+//console.log (personal.nombre)
+//console.log (personal.apellido)
+//console.log (personal.edad)
+
+//Constructores
+//puedo crear una funcion e ir cambiando los valores
+
+//function persona (nombre, calle, talle) {
+    //this.nombre = nombre;
+    //this.calle = calle;
+    //this.talle = talle;
+    //this.hablar = function () {console.log ("Hola soy "+ this.nombre)}
+//}
+//creando la constante le puedo cambiar los valores a la funcion
+//const persona1=  new persona ("Lucia", "El Canelo", 38)
+//const persona2= new persona ("Emma", "El Camello", 45)
+
+//console.log(persona1)
+//console.log(persona2)
+//persona1.hablar()
+//persona2.hablar()
+
+//Clases
+class persona{
+    constructor (nombre, apellido, edad){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
+
+function datosJugador (pierna, posicion, cantPartidos, cantGoles) {
+    this.pierna = pierna;
+    this.posicion = posicion;
+    this.cantPartidos = cantPartidos;
+    this.cantGoles = cantGoles;
+}
+}
+
+const persona1 = new persona ("Lucia", "Veller", 30)
+console.log(persona1)
+
+const datosJugador1 = new datosJugador ("Izquierda", "Pivot", 10, 20)
+console.log(datosJugador1)
+
+
+
+
+
+</script>

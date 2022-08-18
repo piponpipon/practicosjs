@@ -1,0 +1,71 @@
+<script>
+
+// Funciones que pueden recibir funciones por parámetro
+
+function porCadaUno (arr, fn){
+
+for (const el of arr){
+    fn (el)
+}
+}
+
+// Tambien puedo recibir informacion de un array
+
+const numeros = [1,2,3,4]
+porCadaUno (numeros,console.log)
+// Por consola veo
+//1
+//2
+//3
+//4
+
+// Console.log() por parametro
+//
+let total = 0
+/function acumular (num){
+     total += num
+
+}
+//porCadaUno (numeros,acumular)
+//console.log(total) //---> 10
+
+
+
+
+// Funcion flecha
+const duplicado = []
+porCadaUno (numeros,(el) => {
+duplicado.push (el * 2)
+})
+console.log(duplicado) // ----> 2,4,6,8
+
+// Métodos de búsqueda y transformación
+//forEach()
+
+//const numeros = [1,2,3,4]
+//numeros.forEach ((num) => {
+//console.log(num)
+//})
+
+//Metodo FIND
+// Compara parámetros y retorna true o false, el primer elemento que cumpla con esa funcion
+
+const cursos = [
+    {nombre: 'JavaScript', precio: 10},
+    {nombre: 'React JS', precio:22},
+    ]
+    const resultado = cursos.find((el) => el.nombre === "ReactJS") 
+    const resultado2 = cursos.find((el)=>el.nombre === "DW" )
+    console.log(resultado)
+    console.log(resultado2)
+
+
+
+
+
+
+
+
+
+
+</script>
