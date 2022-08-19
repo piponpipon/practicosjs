@@ -1,8 +1,24 @@
 
 //Manuel Veller
 // Primer entrega del Proyecto Final
+// Segunda entrega del proyecto final 18/08/22
+
+
+
 alert('Bienvenidos CoderHouse Futbol Club');
 alert ('Estas en la prueba de seleccion de jugadores, evaluaremos si podes ingresar al equipo')
+
+
+// Acá quise poner la información de cada id del array dentro de cada boton
+// No pude llegar a ese resultado
+let boton = 
+document.getElementsByClassName ('botones') 
+boton.onclick = () => {
+    jugadoresSeleccionados.id[1] == document.getElementById('boton1')
+lista.innerHTML = boton 
+}
+
+
 const jugadoresSeleccionados = [
     {
         id:1,
@@ -64,7 +80,7 @@ function promDeGol (cantGol, cantPartidos){
     }
 
 if (Jugadornuevo.promedioGol >= 1.5){
-    alert('Quedaste seleccionado!')
+    alert('Quedaste seleccionado/a!')
     jugadoresSeleccionados.push(Jugadornuevo)
 } else {
     alert('Que pena, tu promedio de gol no fue el suficiente, suerte la proxima')
@@ -81,21 +97,30 @@ for (const dato of jugadoresSeleccionados){
 
 
 
+
 const lista = document.getElementById('jugadores');
-//for (let i=jugadoresSeleccionados.id; i<4; i++){}
+const li = document.createElement ('li'); 
+
+
+if (Jugadornuevo.promedioGol <= 1.5){
+    lista.innerText = 'Que pena, no ha sido seleccionado/a'
+
+} else{
 for (const jugador  of jugadoresSeleccionados ){
-        
+   
+   
+    
 lista.innerHTML =  `<h2>id: ${jugador.id} </h2>   
                 <h3>nombre: ${jugador.nombre} </h2>
                 <h4>nacionalidad: ${jugador.nacionalidad}</h4> 
                 <h5>piernaHabil ${jugador.piernaHabil}</h5>
                 <h6>promedioGol: ${jugador.promedioGol}</h6> `;
-
-const li = document.createElement ('li');    
-        li.innerHTML = jugador
+                
+                
         
-
-}
+        jugadoresSeleccionados.innerHTML = jugador
+        
+    }}
 
 
 
