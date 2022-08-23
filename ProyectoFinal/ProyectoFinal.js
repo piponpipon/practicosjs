@@ -2,7 +2,7 @@
 //Manuel Veller
 // Primer entrega del Proyecto Final
 // Segunda entrega del proyecto final 18/08/22
-
+// Tercer entrega del proyecto final 23/08/22
 
 
 alert('Bienvenidos CoderHouse Futbol Club');
@@ -11,14 +11,9 @@ alert ('Estas en la prueba de seleccion de jugadores, evaluaremos si podes ingre
 
 // Acá quise poner la información de cada id del array dentro de cada boton
 // No pude llegar a ese resultado
-let boton = 
-document.getElementsByClassName ('botones') 
-boton.onclick = () => {
-    jugadoresSeleccionados.id[1] == document.getElementById('boton1')
-lista.innerHTML = boton 
-}
-
-
+const boton = document.getElementById('boton');
+boton.addEventListener('click', () => {
+   boton.innerHTML = jugadoresSeleccionados = [{id:1}]})
 const jugadoresSeleccionados = [
     {
         id:1,
@@ -47,10 +42,8 @@ const jugadoresSeleccionados = [
         nacionalidad: 'Chile',
         piernaHabil: 'Izquierda',
         promedioGol: 3.1
-    }
-]
+    }]
 console.log(jugadoresSeleccionados)
-
 class Jugadorfutsal {
     constructor (id, nombre,  nacionalidad, piernaHabil, promedioGol) {
         this.id = id;
@@ -58,58 +51,31 @@ class Jugadorfutsal {
         this.nacionalidad = nacionalidad;
         this.piernaHabil = piernaHabil;
         this.promedioGol = promedioGol;
-         }  
-    }
-
-    const Jugadornuevo = new Jugadorfutsal (jugadoresSeleccionados.length +1, 
+         }}
+ const Jugadornuevo = new Jugadorfutsal (jugadoresSeleccionados.length +1, 
                                             prompt ('Indique su nombre y apellido'),
                                             prompt ('Indique su pais'),
                                             prompt('¿Cual es tu pierna habil?'),
                                             promDeGol (prompt('cuantos goles hizo esta temporada'),
                                                        prompt('¿Cuantos partidos jugo esta temporada?'))) ;
-                                                       
-
 function promDeGol (cantGol, cantPartidos){
-        var promedio = (cantGol/cantPartidos)
-        console.log('Tu promedio es ' + promedio)
-        if (promedio >= 1.5){
-            console.log("Felicitaciones fuiste seleccionado/a!!!")
-    } else
-    console.log("Que pena, debido a tu promedio no has sido seleccionado")
-    return(promedio)
-    }
-
-if (Jugadornuevo.promedioGol >= 1.5){
-    alert('Quedaste seleccionado/a!')
-    jugadoresSeleccionados.push(Jugadornuevo)
-} else {
-    alert('Que pena, tu promedio de gol no fue el suficiente, suerte la proxima')
-}
-
+ let promedio = (cantGol/cantPartidos)
+ console.log('Tu promedio es ' + promedio)
+ promedio >= 1.5 ? console.log("Felicitaciones fuiste seleccionado/a!!!") : 
+ console.log("Que pena, debido a tu promedio no has sido seleccionado")
+return (promedio)}
+jugadoresSeleccionados.push(Jugadornuevo)
 console.log('Nuestro plantel actual es: ')
-
 for (const dato of jugadoresSeleccionados){
     console.log('El nombre del jugador es '+ dato.nombre +
     ',su promedio es de ' + dato.promedioGol + ' por partido representando a ' + dato.nacionalidad +
-     " con su fabulosa pierna " + dato.piernaHabil );
-    
-}
-
-
-
-
+     " con su fabulosa pierna " + dato.piernaHabil );}
 const lista = document.getElementById('jugadores');
 const li = document.createElement ('li'); 
-
-
 if (Jugadornuevo.promedioGol <= 1.5){
     lista.innerText = 'Que pena, no ha sido seleccionado/a'
-
 } else{
 for (const jugador  of jugadoresSeleccionados ){
-   
-   
-    
 lista.innerHTML =  `<h2>id: ${jugador.id} </h2>   
                 <h3>nombre: ${jugador.nombre} </h2>
                 <h4>nacionalidad: ${jugador.nacionalidad}</h4> 
