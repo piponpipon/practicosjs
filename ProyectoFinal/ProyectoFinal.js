@@ -3,18 +3,31 @@
 // Primer entrega del Proyecto Final
 // Segunda entrega del proyecto final 18/08/22
 // Tercer entrega del proyecto final 23/08/22
-
-
+// Cuarta entrega del proyecto final 25/08/22
 alert('Bienvenidos CoderHouse Futbol Club');
 alert ('Estas en la prueba de seleccion de jugadores, evaluaremos si podes ingresar al equipo')
+const boton1 = document.getElementById('boton1');
+boton1.addEventListener('click', () => {
+Swal.fire(cadaJugador( jugadoresSeleccionados[0]))
+})
+const boton2 = document.getElementById('boton2');
+boton2.addEventListener('click', () => {
+Swal.fire(cadaJugador( jugadoresSeleccionados[1]))
+})
+const boton3 = document.getElementById('boton3');
+boton3.addEventListener('click', () => {
+Swal.fire(cadaJugador( jugadoresSeleccionados[2]))
+})
+const boton4 = document.getElementById('boton4');
+boton4.addEventListener('click', () => {
+Swal.fire(cadaJugador( jugadoresSeleccionados[3]))
+})
+    function cadaJugador (jugador){
+        return 'Nombre: ' + jugador.nombre + '\n' + 'Nacionalidad: ' + jugador.nacionalidad + '\n' +
+             'Pierna Habil: ' + jugador.piernaHabil + '\n' + 'Promedio de gol: ' +  jugador.promedioGol
+    }
 
-
-// Acá quise poner la información de cada id del array dentro de cada boton
-// No pude llegar a ese resultado
-const boton = document.getElementById('boton');
-boton.addEventListener('click', () => {
-   boton.innerHTML = jugadoresSeleccionados = [{id:1}]})
-const jugadoresSeleccionados = [
+        const jugadoresSeleccionados = [
     {
         id:1,
         nombre: 'Miguel Sanchez',
@@ -31,7 +44,7 @@ const jugadoresSeleccionados = [
     },
     {
         id:3,
-        nombre: 'Wahinton Silva',
+        nombre: 'Washinton Silva',
         nacionalidad:'Uruguay',
         piernaHabil: 'Derecha',
         promedioGol: 3.2
