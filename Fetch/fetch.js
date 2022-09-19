@@ -13,8 +13,13 @@ fetch("https://pokeapi.co/api/v2/pokemon/1")
 	
 
 	
-
-
+		 const pedirJugadores = () => {
+			return new Promise ((resolve, reject) => {
+				setTimeout ( () => {
+					resolve (jugadoresSeleccionados)
+				}, 5000)
+			}
+			)}
 
 
 

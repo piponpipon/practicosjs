@@ -5,6 +5,8 @@
 // Tercer entrega del proyecto final 23/08/22
 // Cuarta entrega del proyecto final 25/08/22
 // Quinta entrega del proyecto final 01/09/22
+// Sexta entrega del proyecto final 19/09/22
+
 alert('Bienvenidos a CoderHouse Futbol Club');
 alert ('Estas en la prueba de seleccion de jugadores, evaluaremos si podes ingresar al equipo')
 const boton1 = document.getElementById('boton1');
@@ -14,9 +16,8 @@ Swal.fire(cadaJugador( jugadoresSeleccionados[0]))
 fetch("https://pokeapi.co/api/v2/pokemon/33")
 	.then((resp) => resp.json())
 	.then((pokemon) => {
-		console.log(pokemon)
 		pokemonnContainer.innerHTML = ` 
-		<h2> ${pokemon.name}</h2>   
+		<h2> En base a sus habildades, su apodo es ${pokemon.name}</h2>   
 	 	<img src = ${pokemon.sprites.front_default} alt = ${pokemon.name}/>;`})
 })
 const boton2 = document.getElementById('boton2');
@@ -25,9 +26,8 @@ Swal.fire(cadaJugador( jugadoresSeleccionados[1]))
 fetch("https://pokeapi.co/api/v2/pokemon/55")
 	.then((resp) => resp.json())
 	.then((pokemon) => {
-		console.log(pokemon)
 		pokemonnContainer.innerHTML = ` 
-		<h2> ${pokemon.name}</h2>   
+		<h2> En base a sus habildades, su apodo es ${pokemon.name}</h2>   
 	 	<img src = ${pokemon.sprites.front_default} alt = ${pokemon.name}/>;`})
 })
 const boton3 = document.getElementById('boton3');
@@ -36,9 +36,8 @@ Swal.fire(cadaJugador( jugadoresSeleccionados[2]))
 fetch("https://pokeapi.co/api/v2/pokemon/66")
 	.then((resp) => resp.json())
 	.then((pokemon) => {
-		console.log(pokemon)
 		pokemonnContainer.innerHTML = ` 
-		<h2> ${pokemon.name}</h2>   
+		<h2> En base a sus habildades, su apodo es ${pokemon.name}</h2>   
 	 	<img src = ${pokemon.sprites.front_default} alt = ${pokemon.name}/>;`})
 })
 const boton4 = document.getElementById('boton4');
@@ -47,17 +46,15 @@ Swal.fire(cadaJugador( jugadoresSeleccionados[3]))
 fetch("https://pokeapi.co/api/v2/pokemon/12")
 	.then((resp) => resp.json())
 	.then((pokemon) => {
-		console.log(pokemon)
 		pokemonnContainer.innerHTML = ` 
-		<h2> ${pokemon.name}</h2>   
-	 	<img src = ${pokemon.sprites.front_default} alt = ${pokemon.name}/>;`})
+		<h2> En base a sus habildades, su apodo es ${pokemon.name}</h2> 
+        <img src = ${pokemon.sprites.front_default} alt = ${pokemon.name}/>;`})
 })
     function cadaJugador (jugador){
         return 'Nombre: ' + jugador.nombre + '\n' + 'Nacionalidad: ' + jugador.nacionalidad + '\n' +
              'Pierna Habil: ' + jugador.piernaHabil + '\n' + 'Promedio de gol: ' +  jugador.promedioGol
   }
-
-        const jugadoresSeleccionados = [
+ const jugadoresSeleccionados = [
     {
         id:1,
         nombre: 'Miguel Sanchez',
@@ -98,15 +95,23 @@ class jugadorfutsal {
  const jugadornuevo = new jugadorfutsal (jugadoresSeleccionados.length +1, 
                                             prompt ('Indique su nombre y apellido'),
                                             prompt ('Indique su pais'),
-                                            prompt('¿Cual es tu pierna habil?'),
-                                            promDeGol (prompt('cuantos goles hizo esta temporada'),
-                                                       prompt('¿Cuantos partidos jugo esta temporada?'))) ;
+                                            prompt('Cual es tu pierna habil?'),
+                                            promDeGol (prompt('Cuantos goles hizo esta temporada?'),
+                                                       prompt('Cuantos partidos jugo esta temporada?'))) ;
 function promDeGol (cantGol, cantPartidos){
- let promedio = (cantGol/cantPartidos)
- console.log('Tu promedio es ' + promedio)
- promedio >= 1.5 ? console.log("Felicitaciones fuiste seleccionado/a!!!") : 
- console.log("Que pena, debido a tu promedio no has sido seleccionado")
-return (promedio)}
+let promedio = (cantGol/cantPartidos)
+new Promise(() => {  
+setTimeout (() => {
+promedio >= 1.5 ? Swal.fire({
+icon: 'success',
+title: 'Felicitaciones!',
+text: 'Fuiste seleccionado/a!!!',})   :
+Swal.fire({
+icon: 'error',
+title: 'Que pena',
+text: 'En base a su promedio de gol, no ha sido seleccionado/a',
+footer: '<a href=""> Queres volver a intentar?</a>'} ) }),2000 } ) 
+return (promedio) }
 jugadoresSeleccionados.push(jugadornuevo)
 console.log('Nuestro plantel actual es: ')
 for (const dato of jugadoresSeleccionados){
@@ -132,10 +137,9 @@ lista.innerHTML =  `<h2>id: ${jugador.id} </h2>
         fetch("https://pokeapi.co/api/v2/pokemon/90")
         .then((resp) => resp.json())
         .then((pokemon) => {
-            console.log(pokemon)
             pokemonnContainer.innerHTML = ` 
-            <h2> ${pokemon.name}</h2>   
-             <img src = ${pokemon.sprites.front_default} alt = ${pokemon.name}/>;`})
+            <h2> En base a tus habildades, tu nuevo apodo es ${pokemon.name}</h2>   
+            <img src = ${pokemon.sprites.front_default} alt = ${pokemon.name}/>;`})
     }}
 
 

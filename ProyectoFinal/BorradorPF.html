@@ -1,0 +1,41 @@
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
+</head>
+
+<script>
+
+
+const goles = prompt('cuantos goles hizo esta temporada')
+const partidos = prompt('¿Cuantos partidos jugo esta temporada?')
+
+
+const promedio = (goles/partidos) 
+console.log('Tu promedio es ' + promedio)
+
+setTimeout (() => {
+  
+ 
+ promedio >= 1.5 ?  : 
+  Swal.fire({
+  icon: 'error',
+  title: 'Qué pena',
+  text: 'En base a su promedio de gol, no ha sido seleccionado/a',
+  footer: '<a href=""> ¿Querés volver a intentar?</a>'
+})  
+}, 2000)
+
+
+</script>
+
+
+function promDeGol (cantGol, cantPartidos){
+    let promedio = (cantGol/cantPartidos)
+ console.log('Tu promedio es ' + promedio)
+ promedio >= 1.5 ? console.log ("Felicitaciones fuiste seleccionado/a!!!") : 
+ console.log ("Que pena, debido a tu promedio no has sido seleccionado")
+return (promedio)}
+
+
+

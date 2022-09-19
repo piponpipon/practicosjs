@@ -1,0 +1,71 @@
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+</head>
+<script>
+ const jugadoresSeleccionados = [
+    {
+        id:1,
+        nombre: 'Miguel Sanchez',
+        nacionalidad: 'Brasil',        
+        piernaHabil: 'Izquierda',
+        promedioGol: 3.2   
+    },
+    {  
+        id:2,
+        nombre: 'Juan Fernandez',
+        nacionalidad:'Argentina',
+        piernaHabil: 'Derecha',
+        promedioGol: 4.3   
+    },
+    {
+        id:3,
+        nombre: 'Washinton Silva',
+        nacionalidad:'Uruguay',
+        piernaHabil: 'Derecha',
+        promedioGol: 3.2
+    },
+    {
+        id:4,
+        nombre: 'Carlos Mena',
+        nacionalidad: 'Chile',
+        piernaHabil: 'Izquierda',
+        promedioGol: 3.1
+    }]
+console.log(jugadoresSeleccionados)
+class jugadorfutsal {
+    constructor (id, nombre,  nacionalidad, piernaHabil, promedioGol) {
+        this.id = id;
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
+        this.piernaHabil = piernaHabil;
+        this.promedioGol = promedioGol;
+         }}
+         const jugadorNuevo = new jugadorfutsal (jugadoresSeleccionados.length +1, 
+                                            prompt ('Indique su nombre y apellido'),
+                                            prompt ('Indique su pais'),
+                                            prompt('¿Cual es tu pierna habil?'),
+                                            promDeGol (prompt('cuantos goles hizo esta temporada'),
+                                                       prompt('¿Cuantos partidos jugo esta temporada?'))) ;
+   
+
+                                                   
+ function promDeGol (cantGol, cantPartidos){
+    let promedio = (cantGol/cantPartidos)
+ new Promise(() => {  
+ setTimeout (() => {
+ promedio >= 1.5 ? Swal.fire({
+  icon: 'success',
+  title: 'Felicitaciones!',
+  text: 'Fuiste seleccionado/a!!!',})   :
+   Swal.fire({
+  icon: 'error',
+  title: 'Qué pena',
+  text: 'En base a su promedio de gol, no ha sido seleccionado/a',
+  footer: '<a href=""> ¿Querés volver a intentar?</a>'} ) }),2000 } ) 
+  return (promedio) }
+  jugadoresSeleccionados.push(jugadorNuevo) 
+
+  
+
+</script>

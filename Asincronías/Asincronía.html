@@ -1,0 +1,67 @@
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+
+</head>
+
+<script>
+
+
+
+
+const jugadoresSeleccionados = [
+    {
+        id:1,
+        nombre: 'Miguel Sanchez',
+        nacionalidad: 'Brasil',        
+        piernaHabil: 'Izquierda',
+        promedioGol: 3.2   
+    },
+    {  
+        id:2,
+        nombre: 'Juan Fernandez',
+        nacionalidad:'Argentina',
+        piernaHabil: 'Derecha',
+        promedioGol: 4.3   
+    },
+    {
+        id:3,
+        nombre: 'Washinton Silva',
+        nacionalidad:'Uruguay',
+        piernaHabil: 'Derecha',
+        promedioGol: 3.2
+    },
+    {
+        id:4,
+        nombre: 'Carlos Mena',
+        nacionalidad: 'Chile',
+        piernaHabil: 'Izquierda',
+        promedioGol: 3.1
+    }]
+
+    function cadaJugador (jugador){
+        return 'Nombre: ' + jugador.nombre + '\n' + 'Nacionalidad: ' + jugador.nacionalidad + '\n' +
+             'Pierna Habil: ' + jugador.piernaHabil + '\n' + 'Promedio de gol: ' +  jugador.promedioGol
+  
+    }
+setTimeout (()=>{
+  Swal.fire(cadaJugador( jugadoresSeleccionados[1]))
+},3000)
+    
+console.log('Vos decis que anda?')
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+ 
